@@ -1,0 +1,11 @@
+var lookup = require('details')();
+
+// using callbacks
+lookup('5192650002238755',
+	function( err, data ){
+		console.log(data);
+	});
+
+// using promises
+lookup('5192650002238755').then(
+	data => console.log(data));
